@@ -4,7 +4,7 @@
 <li>git status</li>
 </ul>
 
-<h2>Push new/update file</h2>
+# Push new/update file
 <ul>
 <li>git add [filename] -A</li>
 <li>git commit -m [message]</li>
