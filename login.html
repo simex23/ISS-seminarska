@@ -44,6 +44,7 @@
 							<li><a href="#">APPAREL</a></li>
 							<li><a href="#">EQUIPMENT</a></li>
 						</ul>
+					</li>
 					<li><a href="#">CONTACT</a></li>
 				</ul>
 <!--icons for register and login-->
@@ -57,19 +58,20 @@
 	</nav>	
 <!--END OF NAVIGATION BAR-->
 <!--START OF THE MAIN STUFF-->
+<div class="godown-70" id="godown"> <!-- Moves down everything so the navigation bar doesn't cover it-->
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-4">
 				<h1 id="log-reg-store">Log in</h1>
-				<div class="form-style">
+				<div class="form-style form-group">
 					<form>
-					Username:<br>
-					<input type="text" name="username"><br><br>
-					Password:<br>
-					<input type="password" name="password"><br><br>
-					<input type="submit" name="submit" value="Log in">
+					<label>Username:</label><br>
+					<input class="form-control" type="text" name="username"><br><br>
+					<label>Password:</label><br>
+					<input class="form-control" type="password" name="password"><br><br>
+					<input class="btn btn-default" type="submit" name="submit" value="Log in">
 					</form>
 				</div>
 			</div>
