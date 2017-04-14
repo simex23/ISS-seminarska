@@ -1,62 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration</title>
-	<script type="text/javascript" src="main.js">
-	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){   //so the second dropdown menu works
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>	
 </head>
 <body>
-	<h1>Registration</h1>
-	<div>
-		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="login.html">Login</a></li>
-		<li><a href="register.html">Register</a></li>
-		</ul>
-	</div>
-	<div>
-		<form method="POST" name="register" onsubmit="javascript: return verify();">
-			<table>
-				<tr>
-					<td>Name:</td>
-					<td><input type="text" name="name"></td>
-				</tr>
-				<tr>
-					<td>Surname:</td>
-					<td><input type="text" name="surname"></td>
-				</tr>
-				<tr>
-					<td>Email:</td>
-					<td><input type="text" name="email"></td>
-				</tr>
-				<tr>
-					<td>Username:</td>
-					<td><input type="text" name="username"></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><input type="password" name="password"></td>
-				</tr>
-				<tr>
-					<td>Re-type password:</td>
-					<td><input type="password" name="password2"></td>
-				</tr>
-				<tr>
-					<td>Gender:</td>
-					<td><input type="radio" name="gender" value="male">Male
+<!--START OF NAVIGATION BAR-->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header"> <!--DEL Z LOGOTIPOM, vsebuje tudi collapse button-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-left" href="index.html"><img src="logo.png" class="logo-header"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav"> <!--del z stranmi-->
+				<!--označena kot aktivna stran kjer se nahajom-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="dropdown">  <!--SECOND DROP DOWN MENU-->
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">GALLERY
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">PHOTO</a></li>
+							<li><a href="#">VIDEO</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">STORE<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">APPAREL</a></li>
+							<li><a href="#">EQUIPMENT</a></li>
+						</ul>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+<!--icons for register and login-->
+				<ul class="nav navbar-nav navbar-right">  
+					<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+					<li class="active"><a href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+					<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>	
+<!--END OF NAVIGATION BAR-->
+<!--START OF THE MAIN STUFF-->
+<div class="godown-70" id="godown"> <!-- Moves down everything so the navigation bar doesn't cover it-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4 req">
+			* - required field
+		</div>
+		<div class="col-sm-4">
+			<h1 id="log-reg-store">Registration</h1>
+			<div class="form-style form-group">
+				<form method="POST" name="register" onsubmit="javascript: return verify();">
+					<label>Name:</label>
+					<input class="form-control" type="text" name="name" palceholder="Name">
+					<label>Surname:</label>
+					<input class="form-control" type="text" name="surname">
+					<label>Email(*):</label>
+					<input class="form-control" type="text" name="email">
+					<label>Username(*):</label>
+					<input class="form-control" type="text" name="username">
+					<label>Password(*):</label>
+					<input class="form-control" type="password" name="password">
+					<label>Re-type password(*):</label>
+					<input class="form-control" type="password" name="password2">
+					<label>Gender:</label>
+					<input type="radio" name="gender" value="male">Male
 					<input type="radio" name="gender" value="female">Female
-					<input type="radio" name="gender" value="other">Other</td>
-				</tr>
-				<tr>
-					<td>Describe yourself:</td>
-					<td><textarea name="description" rows="3"></textarea></td>
-				</tr>
-				<tr>
-					<td><input type="submit" name="submit" value="Register">
-					<input type="reset" value="Reset"></td>
-				</tr>
-			</table>
-		</form>
+					<input type="radio" name="gender" value="other">Other
+					<br><label>Describe yourself:</label>
+					<textarea class="form-control" name="description" rows="3"></textarea><br>
+					<input class="btn-default btn" type="submit" name="submit" value="Register">
+					<input class="btn-default btn" type="reset" value="Reset">
+				</form>
+			</div>
+		</div>
 	</div>
+</div>
+<!--END OF THE MAINSTUFF-->
+<footer class="footer navbar-fixed-bottom">
+	<hr>
+		<div class="container">
+			<div class="row">
+				<span class="col-sm-4">&copy;2017 Street Calisthenics Workout Team</span>
+				
+				<ul class="col-sm-8 social-list">
+					<li class="col-sm-1 pull-right"><a href="https://www.youtube.com/c/simkebarz"><img src="icons/youtube.png" class="social-icons"></a></li>
+					<li class="col-sm-1 pull-right"><a href="https://www.instagram.com/simkebarz"><img src="icons/instagram.png" class="social-icons"></a></li>
+					<li class="col-sm-1 pull-right"><a href="https://www.facebook.com/StreetCalisthenicsSi"><img src="icons/facebook.png" class="social-icons"></a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
