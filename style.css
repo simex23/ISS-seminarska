@@ -20,6 +20,10 @@
 	height:100%;
 	border-radius: 15px;
 }
+.req{
+	color:#ff0000;
+	margin-top: 100px;
+}
 .social-list{
 	list-style:none;
 	float:right;
@@ -47,10 +51,17 @@
 }
 #log-reg-store{
 	text-align:center;
+	padding:10px;
 }
 #godown{
 	height:70px;
 }
 body{
 	padding-top:75px;
+}
+.bckgnd{
+	background-image: url('images/background.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
 }
