@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log in</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){   //so the second dropdown menu works
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>
 </head>
 <body>
-	<h1>Log in</h1>
-	<div>
-		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="login.html">Login</a></li>
-		<li><a href="register.html">Register</a></li>
-		</ul>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header"> <!--DEL Z LOGOTIPOM, vsebuje tudi collapse button-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-left" href="index.html"><img src="logo.png" class="logo-header"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav"> <!--del z stranmi-->
+				<!--označena kot aktivna stran kjer se nahajom-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="dropdown">  <!--SECOND DROP DOWN MENU-->
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">GALLERY
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">PHOTO</a></li>
+							<li><a href="#">VIDEO</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">STORE<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">APPAREL</a></li>
+							<li><a href="#">EQUIPMENT</a></li>
+						</ul>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+<!--icons for register and login-->
+				<ul class="nav navbar-nav navbar-right">  
+					<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+					<li><a href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+					<li class="active"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>	
+<!--END OF NAVIGATION BAR-->
+<!--START OF THE MAIN STUFF-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+			</div>
+			<div class="col-sm-4">
+				<h1 id="log-reg-store">Log in</h1>
+				<div class="form-style">
+					<form>
+					Username:<br>
+					<input type="text" name="username"><br><br>
+					Password:<br>
+					<input type="password" name="password"><br><br>
+					<input type="submit" name="submit" value="Log in">
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div>
-		<form>
-		Username:<br>
-		<input type="text" name="username"><br><br>
-		Password:<br>
-		<input type="password" name="password"><br><br>
-		<input type="submit" name="submit" value="Log in">
-		</form>
-	</div>
+	<!--END OF THE MAINSTUFF-->
+	
+	<footer class="footer navbar-fixed-bottom">
+	<hr>
+		<div class="container">
+			<div class="row">
+				<span class="col-sm-4">&copy;2017 Street Calisthenics Workout Team</span>
+				
+				<ul class="col-sm-8 social-list">
+					<li class="col-sm-1 pull-right"><a href="https://www.youtube.com/c/simkebarz"><img src="icons/youtube.png" class="social-icons"></a></li>
+					<li class="col-sm-1 pull-right"><a href="https://www.instagram.com/simkebarz"><img src="icons/instagram.png" class="social-icons"></a></li>
+					<li class="col-sm-1 pull-right"><a href="https://www.facebook.com/StreetCalisthenicsSi"><img src="icons/facebook.png" class="social-icons"></a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
