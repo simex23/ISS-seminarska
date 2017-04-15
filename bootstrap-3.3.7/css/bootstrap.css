@@ -4963,7 +4963,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-image: url('H:/VSŠ/Praksa/Seminarska/Spletna stran/images/background_edited.jpg');
+  /*background-image: url('/ISS-seminarska/images/background_edited.jpg');*/
   background-size:cover;
   background-repeat: :no-repeat;
   color:#ffffff;
